@@ -12,25 +12,30 @@ public:
 	virtual ~CWiseExportExcelDlg();
 
 // 对话框数据
-	enum { IDD = IDD_DIALOG1 };
+#ifdef AFX_DESIGN_TIME
+	enum { IDD = IDD_DIALOG_EXPORTEXCEL };
+#endif
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
 
 	DECLARE_MESSAGE_MAP()
-private:
-	CString m_strFileSelect;
+public:
+	// 文件路径
 	CString m_strFilePath;
+	afx_msg void OnBnClickedOk();
+	afx_msg void OnBnClickedButtonFilePath();
+	void SetVault(IEdmVault5Ptr poVault);
+	IEdmVault5Ptr GetVault();
+private:
 	IEdmVault5Ptr m_poVault;
+public:
+	CString m_strFileSelect;
+	void SetSelectedFile(CString iFileName);
+	virtual BOOL OnInitDialog();
+private:
 	IEdmFile5Ptr m_poFile;
 public:
 	// 设置数据库文件
 	void SetVaultFile(IEdmFile5Ptr piVault, CString iFileName);
-	void SetVault(IEdmVault5Ptr poVault);
-	IEdmVault5Ptr GetVault();
-	void SetSelectedFile(CString iFileName);
-	virtual BOOL OnInitDialog();
-	afx_msg void OnBnClickedButtonOutputFile();
-	afx_msg void OnBnClickedOk();
-	afx_msg void OnEnChangeEditOutputFile();
 };

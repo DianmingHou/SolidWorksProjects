@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {13A7B4FB-612D-43AE-B67F-4A401834DA6C} = s 'MyAddin Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			TypeLib = s '{4F9073FF-05B3-4140-A01C-28DFE2EB31C6}'
+			Version = s '1.1'
+		}
+	}
+}

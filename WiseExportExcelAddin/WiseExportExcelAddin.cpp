@@ -1,9 +1,5 @@
 // WiseExportExcelAddin.cpp : DLL 导出的实现。
 
-//
-// 注意: COM+ 1.0 信息:
-//      请记住运行 Microsoft Transaction Explorer 以安装组件。
-//      默认情况下不进行注册。
 
 #include "stdafx.h"
 #include "resource.h"
@@ -27,6 +23,7 @@ STDAPI DllCanUnloadNow(void)
 	}
 
 // 返回一个类工厂以创建所请求类型的对象。
+_Check_return_
 STDAPI DllGetClassObject(_In_ REFCLSID rclsid, _In_ REFIID riid, _Outptr_ LPVOID* ppv)
 {
 	#ifdef _MERGE_PROXYSTUB
@@ -37,7 +34,7 @@ STDAPI DllGetClassObject(_In_ REFCLSID rclsid, _In_ REFIID riid, _Outptr_ LPVOID
 		return _AtlModule.DllGetClassObject(rclsid, riid, ppv);
 }
 
-// DllRegisterServer - 在系统注册表中添加项。
+// DllRegisterServer - 向系统注册表中添加项。
 STDAPI DllRegisterServer(void)
 {
 	// 注册对象、类型库和类型库中的所有接口
@@ -50,7 +47,7 @@ STDAPI DllRegisterServer(void)
 		return hr;
 }
 
-// DllUnregisterServer - 在系统注册表中移除项。
+// DllUnregisterServer - 移除系统注册表中的项。
 STDAPI DllUnregisterServer(void)
 {
 	HRESULT hr = _AtlModule.DllUnregisterServer();

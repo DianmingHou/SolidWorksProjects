@@ -2,13 +2,13 @@ HKCR
 {
 	NoRemove CLSID
 	{
-		ForceRemove {C611E3FC-90C3-4005-8B75-733D0F77EE9B} = s 'WiseExportExcel Class'
+		ForceRemove {B6204179-EEEC-4F2A-A6AD-B53725170450} = s 'WiseExportExcel Class'
 		{
 			InprocServer32 = s '%MODULE%'
 			{
 				val ThreadingModel = s 'Both'
 			}
-			TypeLib = s '{4E68C0DB-B309-4B98-9374-6229A45B6CF7}'
+			TypeLib = s '{C6B03EEC-1058-4358-B148-124BA259ABC4}'
 			Version = s '1.0'
 		}
 	}

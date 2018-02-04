@@ -1,4 +1,4 @@
-// WiseExportExcelAddin.idl : WiseExportExcelAddin 的 IDL 源
+// WiseExportExcelAddin.idl : WiseExportExcelAddin的 IDL 源
 //
 
 // 此文件将由 MIDL 工具处理以
@@ -9,20 +9,20 @@ import "ocidl.idl";
 
 [
 	object,
-	uuid(481834E4-0D41-4309-B7D2-2411511D8D3B),
+	uuid(FBAF994B-EC27-44A0-951C-67BE9F8A5C3C),
 	pointer_default(unique)
 ]
 interface IWiseExportExcel : IUnknown{
 };
 [
-	uuid(4E68C0DB-B309-4B98-9374-6229A45B6CF7),
+	uuid(C6B03EEC-1058-4358-B148-124BA259ABC4),
 	version(1.0),
 ]
 library WiseExportExcelAddinLib
 {
 	importlib("stdole2.tlb");
 	[
-		uuid(C611E3FC-90C3-4005-8B75-733D0F77EE9B)		
+		uuid(B6204179-EEEC-4F2A-A6AD-B53725170450)		
 	]
 	coclass WiseExportExcel
 	{

@@ -1,4 +1,4 @@
-; WiseExportExcelAddin.def : 定义模块参数。
+; WiseExportExcelAddin.def : 声明模块参数。
 
 LIBRARY
 

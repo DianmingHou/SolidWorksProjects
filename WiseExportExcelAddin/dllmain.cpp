@@ -1,4 +1,4 @@
-// dllmain.cpp : DllMain 的实现。
+// dllmain.cpp: DllMain 的实现。
 
 #include "stdafx.h"
 #include "resource.h"
@@ -30,6 +30,7 @@ BOOL CWiseExportExcelAddinApp::InitInstance()
 	if (!PrxDllMain(m_hInstance, DLL_PROCESS_ATTACH, NULL))
 		return FALSE;
 #endif
+	//AfxOleInit();
 	return CWinApp::InitInstance();
 }
 

@@ -1,0 +1,32 @@
+// SWPDMATL.idl : SWPDMATL 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(SWPDMATL.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(C3DC6BD3-E11B-4DF0-A65E-38CE261995EC),
+	pointer_default(unique)
+]
+interface IMyAddin : IUnknown{
+};
+[
+	uuid(4F9073FF-05B3-4140-A01C-28DFE2EB31C6),
+	version(1.1),
+]
+library SWPDMATLLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(13A7B4FB-612D-43AE-B67F-4A401834DA6C)		
+	]
+	coclass MyAddin
+	{
+		[default] interface IMyAddin;
+	};
+};
+

@@ -31,8 +31,6 @@
 #include <afxdisp.h>        // MFC 自动化类
 #endif // _AFX_NO_OLE_SUPPORT
 
-#include <comsvcs.h>
-
 #define ATL_NO_ASSERT_ON_DESTROY_NONEXISTENT_WINDOW
 
 #include "resource.h"
@@ -40,7 +38,4 @@
 #include <atlcom.h>
 #include <atlctl.h>
 #include <afxcontrolbars.h>
-#include <windows.h>
-#import "C:\Program Files (x86)\SOLIDWORKS PDM\EdmInterface.dll" raw_interfaces_only, raw_native_types, no_namespace, named_guids, auto_search
-
-
+#import "F:\VSProject\PDMProjs\EdmMFCApp\Edm.tlb" raw_interfaces_only, raw_native_types, no_namespace, named_guids, auto_search

@@ -1,4 +1,4 @@
-// dlldata.c 的包装
+// dlldata.c 的包装器
 
 #ifdef _MERGE_PROXYSTUB // 合并代理存根(stub) DLL
 
