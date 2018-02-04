@@ -1,0 +1,32 @@
+// WiseExportExcelAddin.idl : WiseExportExcelAddin 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(WiseExportExcelAddin.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(481834E4-0D41-4309-B7D2-2411511D8D3B),
+	pointer_default(unique)
+]
+interface IWiseExportExcel : IUnknown{
+};
+[
+	uuid(4E68C0DB-B309-4B98-9374-6229A45B6CF7),
+	version(1.0),
+]
+library WiseExportExcelAddinLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(C611E3FC-90C3-4005-8B75-733D0F77EE9B)		
+	]
+	coclass WiseExportExcel
+	{
+		[default] interface IWiseExportExcel;
+	};
+};
+
